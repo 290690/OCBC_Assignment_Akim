@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Home Work</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">User name</string>
+    <string name="prompt_password">Password</string>
+    <string name="sign_up">REGISTER</string>
+    <string name="login">LOGIN</string>
+    <string name="logout">Logout</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="user_name">user name</string>
+    <string name="password">password</string>
+    <string name="conform_password">conform password</string>
+
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="transfer_title">Transfer</string>
+    <string name="description_hint">description....</string>
+    <string name="amount_hint">Amount</string>
+    <string name="confirm_password_not_match">Confirm Password not match</string>
+
+    <string name="amount_insufficient_error">Insufficient balance</string>
+    <string name="amount_validation_error">Invalid amount</string>
+
+    <string name="account_number_title">Account Number</string>"Error, Transaction not success"
+    <string name="account_holder_title">Account Holder</string>
+    <string name="you_have_title">You have</string>
+    <string name="transaction_not_success">Error, Transaction not success</string>
+    <string name="transaction_success">You success fully transfer SGD</string>
+</resources>
