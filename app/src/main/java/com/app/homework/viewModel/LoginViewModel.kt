@@ -17,16 +17,12 @@ class LoginViewModel() : ViewModel() {
     private val apiService: ApiService = ApiService.getInstance()
     private val mainRepository: MainRepository = MainRepository(apiService)
     private val payeeListUseCase = LoginUseCase(mainRepository, CoroutineDispatcherProvider())
-    /**
-     * live data for notify after when redirect to Register screen anywhere in the app
-     */
+
     private val _isRegister : MutableLiveData<Boolean> = MutableLiveData()
     val isRegister : LiveData<Boolean>
         get() = _isRegister
 
-    /**
-     * live data for notify after when redirect to Login screen anywhere in the app
-     */
+
     private val _isLoginSuccess : MutableLiveData<LoginResponse> = MutableLiveData()
     val isLoginSuccess : LiveData<LoginResponse>
         get() = _isLoginSuccess
