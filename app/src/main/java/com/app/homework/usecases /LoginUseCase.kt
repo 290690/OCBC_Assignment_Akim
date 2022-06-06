@@ -17,9 +17,6 @@ class LoginUseCase (private val mainRepository: MainRepository,private val corou
     override val coroutineContext: CoroutineContext
         get() = coroutineProvider.io
 
-    /**
-     * call account detail api and handle isSuccessful and error
-     */
     fun executeCase(loginRequest : LoginRequest) : MutableLiveData<Response<Any?>> {
         val data = MutableLiveData<Response<Any?>>()
         job  = launch {
