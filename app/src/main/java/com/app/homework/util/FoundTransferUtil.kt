@@ -6,10 +6,6 @@ import com.app.homework.ui.model.TransactionRecyclerItem
 object FoundTransferUtil {
 
 
-    /**
-     * prepare TransactionRecyclerItems section list UI model for adapter
-     * group from transaction date
-     */
     fun getTransactionList(data : List<TransactionList>) : ArrayList<TransactionRecyclerItem>{
 
         val transactionList : ArrayList<TransactionRecyclerItem> = arrayListOf()
