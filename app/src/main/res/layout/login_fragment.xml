@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorbg_red"
     android:orientation="vertical">
-
     <include layout="@layout/navigation_view"/>
 
     <LinearLayout
@@ -12,11 +12,25 @@
         android:layout_height="match_parent"
         android:padding="16dp"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:paddingBottom="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"></TextView>
+
+
         <EditText
             android:id="@+id/username_edtxt"
             style="@style/edittext_style1"
             android:maxLines="1"
             android:hint="@string/prompt_email"
+            android:textColor="@color/white"
             android:inputType="text"
             android:selectAllOnFocus="true"/>
 
@@ -26,6 +40,7 @@
         android:hint="@string/prompt_password"
         android:inputType="textPassword"
         android:maxLines="1"
+        android:textColor="@color/white"
         android:imeOptions="actionDone"
         android:selectAllOnFocus="true" />
 
@@ -34,6 +49,14 @@
         android:id="@+id/login_btn"
         style="@style/blue_button_style"
         android:enabled="false"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:background="@color/colorbtn"
+        android:layout_marginTop="50dp"
+        android:bottomRightRadius="10dp"
+        android:bottomLeftRadius="10dp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"
         android:text="@string/login"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -41,7 +64,8 @@
         style="@style/blue_button_style"
         android:layout_marginTop="8dp"
         android:background="@color/white"
-        android:textColor="@color/color_blue"
+        android:textSize="16dp"
+        android:textColor="@color/colorbg_red"
         android:text="@string/sign_up"/>
 
     <ProgressBar
