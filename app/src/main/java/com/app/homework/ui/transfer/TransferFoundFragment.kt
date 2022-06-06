@@ -18,7 +18,7 @@ import com.app.homework.viewModel.TransactionsViewModel
 import com.app.homework.ui.custom.ThousandSeparatorTextWatcher
 import com.app.homework.ui.disableButton
 import com.app.homework.ui.enableButton
-import com.app.homework.ui.model.PayeeUiModel
+import com.app.homework.domain.model.PayeeUiModel
 import com.app.homework.viewModel.FundTransferViewModel
 
 
