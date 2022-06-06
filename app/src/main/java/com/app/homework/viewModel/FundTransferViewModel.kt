@@ -99,5 +99,4 @@ class FundTransferViewModel : ViewModel() {
     fun setPayeeUiModel(payeeUiModel : PayeeUiModel){
         payeeModel = payeeUiModel
     }
-
 }
