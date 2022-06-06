@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="@dimen/vertical_margin_16"
+    android:background="@color/colorbg_red"
     tools:context=".ui.transactions.TransactionsFragment">
 
     <TextView
@@ -14,8 +15,9 @@
         android:gravity="end"
         android:layout_marginTop="@dimen/vertical_margin_8"
         android:layout_marginRight="@dimen/vertical_margin_16"
-        android:textSize="20dp"
-        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:padding="15dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/logout" />
 
@@ -23,7 +25,8 @@
         android:id="@+id/account_details_cardView"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_gravity="center"
-        android:layout_marginRight="120dp"
+        card_view:circularflow_defaultRadius="20dp"
+        android:layout_marginRight="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/fragment_vertical_margin_4"
@@ -42,7 +45,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/text_size_14"
+                android:textSize="15dp"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/you_have_title" />
@@ -51,7 +54,7 @@
                 android:id="@+id/amount_you_have_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
+                android:textSize="30dp"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-black" />
 
@@ -91,8 +94,10 @@
                 style="@style/blue_button_style"
                 android:layout_height="36dp"
                 android:layout_gravity="start"
+                android:background="@color/colorbg_red"
                 android:layout_marginTop="@dimen/vertical_margin_4"
                 android:layout_marginRight="@dimen/fragment_vertical_margin_4"
+                android:layout_marginLeft="@dimen/fragment_vertical_margin_4"
                 android:text="@string/transfer_title"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -102,14 +107,14 @@
         android:id="@+id/transaction_history_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14dp"
+        android:textSize="15dp"
         android:paddingLeft="@dimen/vertical_margin_16"
         android:paddingBottom="@dimen/vertical_margin_4"
-        android:layout_marginTop="@dimen/vertical_margin_8"
-        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
         android:fontFamily="sans-serif-black"
         app:layout_constraintTop_toBottomOf="@+id/account_details_cardView"
-        android:text="Your transaction history" />
+        android:text="Your Transaction History" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/collect_details_recycleview"
