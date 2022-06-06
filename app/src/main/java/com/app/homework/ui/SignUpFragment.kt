@@ -19,12 +19,11 @@ import com.app.homework.viewModel.SignUpViewModel
 class SignUpFragment : Fragment(), UiEventInterface {
 
     private val signUpViewModel: SignUpViewModel by viewModels()
-    private var progressBar : ProgressBar? = null
-
-    private var userNameEdtText : EditText? = null
-    private var passwordEdtText : EditText? = null
     private var confPasswordEdtText : EditText? = null
     private var registerBtn : AppCompatButton? = null
+    private var progressBar : ProgressBar? = null
+    private var userNameEdtText : EditText? = null
+    private var passwordEdtText : EditText? = null
 
     companion object {
         fun newInstance() = SignUpFragment()
