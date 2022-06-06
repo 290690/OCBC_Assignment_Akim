@@ -16,9 +16,6 @@ class AccountBalanceUseCase(private val mainRepository: MainRepository,private v
     override val coroutineContext: CoroutineContext
         get() = coroutineProvider.io
 
-    /**
-     * call account detail api and handle isSuccessful and error
-     */
     fun executeCase(jwtToken : String) : MutableLiveData<Response<Any?>>{
         val data = MutableLiveData<Response<Any?>>()
         job  = launch {
