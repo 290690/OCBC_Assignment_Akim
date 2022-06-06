@@ -17,16 +17,10 @@ class SignUpViewModel : ViewModel() {
     private val apiService: ApiService = ApiService.getInstance()
     private val mainRepository: MainRepository = MainRepository(apiService)
 
-    /**
-     * live data for notify after when redirect to SignUp screen anywhere in the app
-     */
     private val _isSignUpSuccess : MutableLiveData<SignUpResponse> = MutableLiveData()
     val isSignUpSuccess : LiveData<SignUpResponse>
         get() = _isSignUpSuccess
 
-    /**
-     * live data for notify when Error and handle in UI Fragment or Activity
-     */
     private val _isError : MutableLiveData<String> = MutableLiveData()
     val isError : LiveData<String>
         get() = _isError
