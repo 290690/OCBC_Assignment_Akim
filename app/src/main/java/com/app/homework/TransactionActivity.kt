@@ -3,12 +3,12 @@ package com.app.homework
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.activity.viewModels
-import androidx.lifecycle.Observer
 import com.app.homework.const.ApplicationConst
 import com.app.homework.listners.UiEventInterface
 import com.app.homework.ui.transfer.TransferFoundFragment
 import com.app.homework.ui.transactions.TransactionsFragment
+import androidx.activity.viewModels
+import androidx.lifecycle.Observer
 import com.app.homework.util.addFragment
 import com.app.homework.viewModel.TransactionsViewModel
 
