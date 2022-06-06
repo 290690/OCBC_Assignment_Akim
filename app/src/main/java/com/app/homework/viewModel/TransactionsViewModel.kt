@@ -53,9 +53,7 @@ class TransactionsViewModel : ViewModel() {
     private val _isError : MutableLiveData<String> = MutableLiveData()
     val isError : LiveData<String>
         get() = _isError
-    /**
-     * live data for handle Loading and notify for UI
-     */
+
     private val _isLoading : MutableLiveData<Boolean> = MutableLiveData()
     val isLoading : LiveData<Boolean>
         get() = _isLoading
