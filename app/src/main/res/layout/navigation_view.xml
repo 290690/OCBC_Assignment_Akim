@@ -18,9 +18,11 @@
         android:id="@+id/title_text"
         android:layout_weight="1"
         android:text="@string/login"
-        android:textSize="10pt"
-        android:textColor="@color/color_blue"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:gravity="center_vertical"
+        android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"/>
