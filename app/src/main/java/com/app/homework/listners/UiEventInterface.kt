@@ -4,6 +4,6 @@ import android.view.View
 
 interface UiEventInterface {
 
-    fun setUpUi(view : View)
     fun initLiveData()
+    fun setUpUi(view : View)
 }
