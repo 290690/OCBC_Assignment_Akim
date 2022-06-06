@@ -6,8 +6,8 @@ import android.widget.EditText
 import com.app.homework.util.FormatUtil
 
 
-class ThousandSeparatorTextWatcher(private val editText : EditText,
-                                   private val accountBalance: String,
+class ThousandSeparatorTextWatcher(private val accountBalance: String,
+                                   private val editText : EditText,
                                    private val listener : AmountFormatTextWatcherListener) : TextWatcher {
 
     override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
