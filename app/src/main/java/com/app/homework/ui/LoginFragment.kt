@@ -22,10 +22,10 @@ import com.app.homework.viewModel.LoginViewModel
 class LoginFragment : Fragment(),UiEventInterface {
 
     private val loginViewModel: LoginViewModel by activityViewModels()
+    private var loginBtn : AppCompatButton? = null
     private var userNameEdtText : EditText? = null
     private var passwordEdtText : EditText? = null
     private var progressBar : ProgressBar? = null
-    private var loginBtn : AppCompatButton? = null
 
     companion object {
         fun newInstance() = LoginFragment()
