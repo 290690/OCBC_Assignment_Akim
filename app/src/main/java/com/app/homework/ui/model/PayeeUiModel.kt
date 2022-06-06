@@ -1,8 +1,8 @@
 package com.app.homework.ui.model
 
 data class PayeeUiModel(
-    var accountNumber: String,
-    var name: String
+    var name: String,
+    var accountNumber: String
 ){
     override fun toString(): String {
         return name
