@@ -1,4 +1,4 @@
-package com.app.homework.ui.model
+package com.app.homework.domain.model
 
 data class PayeeUiModel(
     var name: String,
