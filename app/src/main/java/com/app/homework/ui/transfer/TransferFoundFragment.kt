@@ -66,7 +66,7 @@ class TransferFoundFragment : Fragment(), UiEventInterface,ThousandSeparatorText
         registerBtn.disableButton()
         amountEdtText = view.findViewById(R.id.found_transfer_amount_edtxt)
         descEdtText = view.findViewById(R.id.found_transfer_desc_edtxt)
-        amountEdtText.addTextChangedListener(ThousandSeparatorTextWatcher(amountEdtText,transactionsViewModel.accountBalance(),this))
+        amountEdtText.addTextChangedListener(ThousandSeparatorTextWatcher(transactionsViewModel.accountBalance(),amountEdtText,this))
 
         titleText.setText(R.string.transfer_title)
         titleImage.visibility = View.VISIBLE
