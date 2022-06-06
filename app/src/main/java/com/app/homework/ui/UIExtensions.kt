@@ -5,9 +5,8 @@ import com.app.homework.R
 
 internal fun AppCompatButton.enableButton(){
     isEnabled = true
-    setBackgroundColor(resources.getColor(R.color.color_blue))
+    setBackgroundColor(resources.getColor(R.color.colorbg_red))
 }
-
 
 internal fun AppCompatButton.disableButton(){
     isEnabled = false
