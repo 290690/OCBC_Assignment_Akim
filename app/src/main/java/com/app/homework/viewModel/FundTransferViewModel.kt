@@ -7,9 +7,8 @@ import com.app.homework.domain.Response
 import com.app.homework.domain.model.PayeeResponseModel
 import com.app.homework.domain.model.TransferRequestModel
 import com.app.homework.domain.model.TransferResponseModel
-import com.app.homework.ui.model.PayeeUiModel
+import com.app.homework.domain.model.PayeeUiModel
 import com.app.homework.usecases.FoundTransferUseCase
-import com.app.homework.usecases.TransferListUseCase
 import com.app.homework.usecases.PayeeListUseCase
 import com.app.homework.util.CoroutineDispatcherProvider
 
