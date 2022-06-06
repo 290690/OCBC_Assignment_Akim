@@ -37,6 +37,4 @@ class TransferListUseCase(private val mainRepository: MainRepository,private val
         if (coroutineContext.isActive)
             job?.cancel()
     }
-
-
 }
