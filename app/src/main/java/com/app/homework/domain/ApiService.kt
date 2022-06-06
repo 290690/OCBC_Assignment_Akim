@@ -15,18 +15,19 @@ interface ApiService {
     @POST("register")
     suspend fun doSignUp(@Body signUpRequest : SignUpRequest) : Response<SignUpResponse>
 
-    @GET("balance")
-    suspend fun getAccountBalance(@Header("Authorization") authorization : String) : Response<BalanceResponseModel>
+    @POST("transfer")
+    suspend fun doTransfer(@Header("Authorization") authorization : String,
+                           @Body transferRequestModel : TransferRequestModel) : Response<TransferResponseModel>
 
     @GET("transactions")
     suspend fun getTransactions(@Header("Authorization") authorization : String) : Response<TransactionResponse>
 
+    @GET("balance")
+    suspend fun getAccountBalance(@Header("Authorization") authorization : String) : Response<BalanceResponseModel>
+
     @GET("payees")
     suspend fun getPayeeList(@Header("Authorization") authorization : String) : Response<PayeeResponseModel>
 
-    @POST("transfer")
-    suspend fun doTransfer(@Header("Authorization") authorization : String,
-                           @Body transferRequestModel : TransferRequestModel) : Response<TransferResponseModel>
 
     companion object {
         var retrofitService: ApiService? = null
