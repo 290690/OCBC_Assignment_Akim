@@ -16,9 +16,6 @@ class SignUpUseCase (private val mainRepository: MainRepository,private val coro
     override val coroutineContext: CoroutineContext
         get() = coroutineProvider.io
 
-    /**
-     * call account detail api and handle isSuccessful and error
-     */
     fun executeCase(signUpRequest : SignUpRequest) : MutableLiveData<Response<Any?>> {
         val data = MutableLiveData<Response<Any?>>()
         job  = launch {
