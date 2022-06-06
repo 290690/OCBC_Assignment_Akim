@@ -29,9 +29,9 @@ import kotlin.system.exitProcess
 class TransactionsFragment : Fragment(), UiEventInterface {
 
     private val transactionsViewModel: TransactionsViewModel by activityViewModels()
-    private var progressBar : ProgressBar? = null
     private var accountHolderNumberText : TextView? = null
     private var accountBalanceText : TextView? = null
+    private var progressBar : ProgressBar? = null
     private lateinit var recyclerView : RecyclerView
 
     companion object {
@@ -44,9 +44,9 @@ class TransactionsFragment : Fragment(), UiEventInterface {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setUpUi(view)
         initLiveData()
         getAccountBalance()
+        setUpUi(view)
         getTransactionList()
     }
 
