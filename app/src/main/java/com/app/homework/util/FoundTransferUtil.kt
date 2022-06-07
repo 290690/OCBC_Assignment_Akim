@@ -1,7 +1,7 @@
 package com.app.homework.util
 
-import com.app.homework.domain.model.TransactionList
-import com.app.homework.ui.model.TransactionRecyclerItem
+import com.app.homework.model.TransactionList
+import com.app.homework.view.model.TransactionRecyclerItem
 
 object FoundTransferUtil {
 
