@@ -18,7 +18,7 @@ import com.app.homework.viewmodel.TransactionsViewModel
 import java.lang.NumberFormatException
 import android.content.Intent
 
-import com.app.homework.LoginActivity
+import com.app.homework.view.LoginActivity
 
 
 class TransactionsFragment : Fragment(), UiEventInterface {

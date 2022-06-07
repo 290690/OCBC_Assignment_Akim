@@ -1,4 +1,4 @@
-package com.app.homework
+package com.app.homework.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +9,7 @@ import com.app.homework.view.transfer.TransferFoundFragment
 import com.app.homework.view.transactions.TransactionsFragment
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import com.app.homework.R
 import com.app.homework.util.addFragment
 import com.app.homework.viewmodel.TransactionsViewModel
 
