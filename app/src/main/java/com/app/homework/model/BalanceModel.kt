@@ -1,6 +1,4 @@
-package com.app.homework.domain.model
-
-import com.app.homework.domain.Response
+package com.app.homework.model
 
 data class BalanceResponseModel(val balance: String,
                                 val status: String,

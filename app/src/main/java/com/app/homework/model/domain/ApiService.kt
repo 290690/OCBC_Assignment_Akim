@@ -1,6 +1,6 @@
-package com.app.homework.domain
+package com.app.homework.model.domain
 
-import com.app.homework.domain.model.*
+import com.app.homework.model.*
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

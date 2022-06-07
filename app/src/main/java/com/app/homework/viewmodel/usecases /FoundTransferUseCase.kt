@@ -1,10 +1,10 @@
 package com.app.homework.usecases
 
 import androidx.lifecycle.MutableLiveData
-import com.app.homework.domain.MainRepository
-import com.app.homework.domain.Response
-import com.app.homework.domain.model.TransferRequestModel
-import com.app.homework.listners.CoroutineListener
+import com.app.homework.model.domain.MainRepository
+import com.app.homework.model.domain.Response
+import com.app.homework.model.TransferRequestModel
+import com.app.homework.view.listners.CoroutineListener
 import com.app.homework.util.CoroutineDispatcherProvider
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
