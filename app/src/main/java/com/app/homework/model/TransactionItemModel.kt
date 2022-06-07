@@ -1,4 +1,4 @@
-package com.app.homework.ui.model
+package com.app.homework.view.model
 
 sealed class TransactionRecyclerItem {
 

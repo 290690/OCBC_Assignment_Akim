@@ -1,4 +1,4 @@
-package com.app.homework.ui.transfer
+package com.app.homework.view.transfer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,15 +11,15 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.app.homework.R
-import com.app.homework.listners.UiEventInterface
-import com.app.homework.ui.custom.AcknowledgementDialog
-import com.app.homework.viewModel.TransactionsViewModel
+import com.app.homework.view.listners.UiEventInterface
+import com.app.homework.view.custom.AcknowledgementDialog
+import com.app.homework.viewmodel.TransactionsViewModel
 
-import com.app.homework.ui.custom.ThousandSeparatorTextWatcher
-import com.app.homework.ui.disableButton
-import com.app.homework.ui.enableButton
-import com.app.homework.domain.model.PayeeUiModel
-import com.app.homework.viewModel.FundTransferViewModel
+import com.app.homework.view.custom.ThousandSeparatorTextWatcher
+import com.app.homework.view.disableButton
+import com.app.homework.view.enableButton
+import com.app.homework.model.PayeeUiModel
+import com.app.homework.viewmodel.FundTransferViewModel
 
 
 class TransferFoundFragment : Fragment(), UiEventInterface,ThousandSeparatorTextWatcher.AmountFormatTextWatcherListener {

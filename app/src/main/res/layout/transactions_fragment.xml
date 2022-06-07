@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingTop="@dimen/vertical_margin_16"
     android:background="@color/colorbg_red"
-    tools:context=".ui.transactions.TransactionsFragment">
+    tools:context=".view.transactions.TransactionsFragment">
 
     <TextView
         android:id="@+id/logout_btn"

@@ -1,7 +1,6 @@
-package com.app.homework.ui.transactions
+package com.app.homework.view.transactions
 
 import android.app.Activity
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,17 +12,13 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.app.homework.R
-import com.app.homework.listners.UiEventInterface
+import com.app.homework.view.listners.UiEventInterface
 import com.app.homework.util.FormatUtil
-import com.app.homework.viewModel.TransactionsViewModel
+import com.app.homework.viewmodel.TransactionsViewModel
 import java.lang.NumberFormatException
 import android.content.Intent
 
-import androidx.core.content.IntentCompat
 import com.app.homework.LoginActivity
-import com.app.homework.TransactionActivity
-import com.app.homework.const.ApplicationConst
-import kotlin.system.exitProcess
 
 
 class TransactionsFragment : Fragment(), UiEventInterface {

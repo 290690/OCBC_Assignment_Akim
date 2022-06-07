@@ -1,26 +1,26 @@
 package com.app.homework.usecases
 
 import androidx.lifecycle.MutableLiveData
-import com.app.homework.domain.MainRepository
-import com.app.homework.domain.Response
-import com.app.homework.domain.model.SignUpRequest
-import com.app.homework.listners.CoroutineListener
+import com.app.homework.model.domain.MainRepository
+import com.app.homework.model.domain.Response
+import com.app.homework.model.LoginRequest
+import com.app.homework.view.listners.CoroutineListener
 import com.app.homework.util.CoroutineDispatcherProvider
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
-class SignUpUseCase (private val mainRepository: MainRepository,private val coroutineProvider : CoroutineDispatcherProvider) : CoroutineScope,
+class LoginUseCase (private val mainRepository: MainRepository,private val coroutineProvider : CoroutineDispatcherProvider) : CoroutineScope,
     CoroutineListener {
 
     var job: Job? = null
     override val coroutineContext: CoroutineContext
         get() = coroutineProvider.io
 
-    fun executeCase(signUpRequest : SignUpRequest) : MutableLiveData<Response<Any?>> {
+    fun executeCase(loginRequest : LoginRequest) : MutableLiveData<Response<Any?>> {
         val data = MutableLiveData<Response<Any?>>()
         job  = launch {
 
-            val response = mainRepository.doSignUp(signUpRequest)
+            val response = mainRepository.doLogin(loginRequest)
             val dataValue = when {
                 response.isSuccessful -> {
                     Response.SuccessResponse(response.body())

@@ -1,4 +1,4 @@
-package com.app.homework.domain
+package com.app.homework.model.domain
 
 public sealed class Response<out T > {
     public final data class SuccessResponse<out T >(val response: T): Response<T>()

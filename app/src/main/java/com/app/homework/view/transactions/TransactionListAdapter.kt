@@ -1,4 +1,4 @@
-package com.app.homework.ui.transactions
+package com.app.homework.view.transactions
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.app.homework.R
-import com.app.homework.ui.model.TransactionRecyclerItem
+import com.app.homework.view.model.TransactionRecyclerItem
 import com.app.homework.util.FormatUtil
 
 class TransactionListAdapter(private val transactionList : List<TransactionRecyclerItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){

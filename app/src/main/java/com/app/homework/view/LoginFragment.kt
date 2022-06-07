@@ -1,4 +1,4 @@
-package com.app.homework.ui
+package com.app.homework.view
 
 import android.os.Bundle
 import android.text.Editable
@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -15,17 +14,17 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.app.homework.R
-import com.app.homework.listners.UiEventInterface
+import com.app.homework.view.listners.UiEventInterface
 import com.app.homework.util.hideKeyboard
-import com.app.homework.viewModel.LoginViewModel
+import com.app.homework.viewmodel.LoginViewModel
 
 class LoginFragment : Fragment(),UiEventInterface {
 
     private val loginViewModel: LoginViewModel by activityViewModels()
-    private var loginBtn : AppCompatButton? = null
-    private var userNameEdtText : EditText? = null
-    private var passwordEdtText : EditText? = null
-    private var progressBar : ProgressBar? = null
+    private lateinit var loginBtn : AppCompatButton
+    private lateinit var userNameEdtText : EditText
+    private lateinit var passwordEdtText : EditText
+    private lateinit var progressBar : ProgressBar
 
     companion object {
         fun newInstance() = LoginFragment()

@@ -1,29 +1,38 @@
-package com.app.homework.viewModel
+package com.app.homework.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.app.homework.domain.ApiService
-import com.app.homework.domain.MainRepository
-import com.app.homework.domain.model.LoginRequest
-import com.app.homework.domain.model.LoginResponse
-import com.app.homework.domain.model.SignUpRequest
-import com.app.homework.domain.model.SignUpResponse
+import com.app.homework.model.domain.ApiService
+import com.app.homework.model.domain.MainRepository
+import com.app.homework.model.LoginRequest
+import com.app.homework.model.LoginResponse
+import com.app.homework.usecases.LoginUseCase
+import com.app.homework.util.CoroutineDispatcherProvider
 import kotlinx.coroutines.*
 
-class SignUpViewModel : ViewModel() {
-
+class LoginViewModel() : ViewModel() {
 
     private val apiService: ApiService = ApiService.getInstance()
     private val mainRepository: MainRepository = MainRepository(apiService)
+    private val payeeListUseCase = LoginUseCase(mainRepository, CoroutineDispatcherProvider())
 
-    private val _isSignUpSuccess : MutableLiveData<SignUpResponse> = MutableLiveData()
-    val isSignUpSuccess : LiveData<SignUpResponse>
-        get() = _isSignUpSuccess
+    private val _isRegister : MutableLiveData<Boolean> = MutableLiveData()
+    val isRegister : LiveData<Boolean>
+        get() = _isRegister
 
+
+    private val _isLoginSuccess : MutableLiveData<LoginResponse> = MutableLiveData()
+    val isLoginSuccess : LiveData<LoginResponse>
+        get() = _isLoginSuccess
+
+    /**
+     * live data for notify when Error and handle in UI Fragment or Activity
+     */
     private val _isError : MutableLiveData<String> = MutableLiveData()
     val isError : LiveData<String>
         get() = _isError
+
 
     /**
      * live data for handle Loading and notify for UI
@@ -32,20 +41,27 @@ class SignUpViewModel : ViewModel() {
     val isLoading : LiveData<Boolean>
         get() = _isLoading
 
+    /**
+     * setRegister will for listen user navigate to Signup
+     */
+    fun setRegister(){
+        _isRegister.postValue(true)
+    }
+
     var job: Job? = null
     val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         onError("Exception handled: ${throwable.localizedMessage}")
     }
 
     /**
-     * call signup api and handle isSuccessful and error (can move to UseCase from viewmodel if want to extend to clean architecture )
+     * call login api and handle isSuccessful and error (can move to UseCase from viewmodel if want to extend to clean architecture )
      */
-    fun doSignUp(userName : String,password : String) {
+    fun doLogin(userName : String,password : String) {
         job = CoroutineScope(Dispatchers.IO + exceptionHandler).launch {
-            val response = mainRepository.doSignUp(SignUpRequest(userName,password))
+            val response = mainRepository.doLogin(LoginRequest(userName,password))
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {
-                    _isSignUpSuccess.postValue(response.body())
+                    _isLoginSuccess.postValue(response.body())
                     _isLoading.postValue(false)
                 } else {
                     _isError.postValue(response.message())

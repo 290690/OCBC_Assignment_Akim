@@ -1,4 +1,4 @@
-package com.app.homework.ui
+package com.app.homework.view
 
 import android.os.Bundle
 import android.text.Editable
@@ -12,18 +12,18 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.app.homework.R
-import com.app.homework.listners.UiEventInterface
+import com.app.homework.view.listners.UiEventInterface
 import com.app.homework.util.hideKeyboard
-import com.app.homework.viewModel.SignUpViewModel
+import com.app.homework.viewmodel.SignUpViewModel
 
 class SignUpFragment : Fragment(), UiEventInterface {
 
     private val signUpViewModel: SignUpViewModel by viewModels()
-    private var confPasswordEdtText : EditText? = null
-    private var registerBtn : AppCompatButton? = null
-    private var progressBar : ProgressBar? = null
-    private var userNameEdtText : EditText? = null
-    private var passwordEdtText : EditText? = null
+    private lateinit var confPasswordEdtText : EditText
+    private lateinit var registerBtn : AppCompatButton
+    private lateinit var progressBar : ProgressBar
+    private lateinit var userNameEdtText : EditText
+    private lateinit var passwordEdtText : EditText
 
     companion object {
         fun newInstance() = SignUpFragment()

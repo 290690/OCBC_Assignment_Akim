@@ -1,4 +1,4 @@
-package com.app.homework.domain.model
+package com.app.homework.model
 
 data class TransferRequestModel(val receipientAccountNo : String,
                                 val amount : Double,

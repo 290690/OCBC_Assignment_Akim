@@ -1,4 +1,4 @@
-package com.app.homework.domain.model
+package com.app.homework.model
 
 data class PayeeResponseModel(val status : String,val data : List<Payee>)
 

@@ -1,16 +1,15 @@
-package com.app.homework.viewModel
+package com.app.homework.viewmodel
 
 import androidx.lifecycle.*
-import com.app.homework.domain.ApiService
-import com.app.homework.domain.MainRepository
-import com.app.homework.domain.Response
-import com.app.homework.domain.model.*
-import com.app.homework.ui.model.TransactionRecyclerItem
+import com.app.homework.model.domain.ApiService
+import com.app.homework.model.domain.MainRepository
+import com.app.homework.model.domain.Response
+import com.app.homework.model.*
+import com.app.homework.view.model.TransactionRecyclerItem
 import com.app.homework.usecases.AccountBalanceUseCase
 import com.app.homework.usecases.TransferListUseCase
 import com.app.homework.util.CoroutineDispatcherProvider
 import com.app.homework.util.FoundTransferUtil
-import kotlinx.coroutines.*
 
 class TransactionsViewModel : ViewModel() {
 

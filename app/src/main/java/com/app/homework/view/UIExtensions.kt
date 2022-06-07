@@ -1,4 +1,4 @@
-package com.app.homework.ui
+package com.app.homework.view
 
 import androidx.appcompat.widget.AppCompatButton
 import com.app.homework.R

@@ -1,4 +1,4 @@
-package com.app.homework.ui.custom
+package com.app.homework.view.custom
 
 import android.text.Editable
 import android.text.TextWatcher
