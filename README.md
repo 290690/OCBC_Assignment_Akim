@@ -1,21 +1,41 @@
-#OCBC Assignment Akim
+# OCBC Assignment Akim
 
 This repository contains OCBC Assignment. User can register and login to Application. User can see all transactions and account information in dashboard. User can make transaction from transaction screen. This app followed MVVM architecture.
 
+# Packages
 
 The app has following packages:
-1. base: BaseViewModel and BaseFragment
-2. login: login related ui components and viewModel
-3. registration: registration related ui components and viewModel
-4. dashboard: dashboard related ui components and viewModel
-5. transfer: transfer related ui components and viewModel
-6. data: Repository and APIClient
-7. utils: Utility classes
+- base: BaseViewModel and BaseFragment
+- login: login related ui components and viewModel
+- registration: registration related ui components and viewModel
+- transfer: transfer related ui components and viewModel
+- data: Repository and APIClient
+- utils: Utility classes
 
-Library used:
+# Features
+
+1. Login
+2. Register
+3. See Balance
+4. See Transactions
+5. See and Choose Payee
+6. Transfer Balance
+
+# Usage 
+Architecture : MVVM
+<br><br>
 1. Retrofit2: Used for REST api call
 2. Jetpack navigation: Used for navigate fragments
 3. Swiperefreshlayout: To refresh the transactions history
 4. Mockk.io : Used for junit
+5. Android Jetpack Library
+6. Loopj - Android Asynchronous Http Client
+7. Kotlin Coroutines
+8. Junit
+9. Mockito
+
+
+
+
 
 
