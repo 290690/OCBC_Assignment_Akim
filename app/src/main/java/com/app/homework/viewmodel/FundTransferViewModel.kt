@@ -1,13 +1,13 @@
-package com.app.homework.viewModel
+package com.app.homework.viewmodel
 
 import androidx.lifecycle.*
-import com.app.homework.domain.ApiService
-import com.app.homework.domain.MainRepository
-import com.app.homework.domain.Response
-import com.app.homework.domain.model.PayeeResponseModel
-import com.app.homework.domain.model.TransferRequestModel
-import com.app.homework.domain.model.TransferResponseModel
-import com.app.homework.domain.model.PayeeUiModel
+import com.app.homework.model.domain.ApiService
+import com.app.homework.model.domain.MainRepository
+import com.app.homework.model.domain.Response
+import com.app.homework.model.PayeeResponseModel
+import com.app.homework.model.TransferRequestModel
+import com.app.homework.model.TransferResponseModel
+import com.app.homework.model.PayeeUiModel
 import com.app.homework.usecases.FoundTransferUseCase
 import com.app.homework.usecases.PayeeListUseCase
 import com.app.homework.util.CoroutineDispatcherProvider
