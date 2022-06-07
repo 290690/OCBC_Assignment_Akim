@@ -113,7 +113,7 @@ class SignUpFragment : Fragment(), UiEventInterface {
                 progressBar?.visibility = View.GONE
         })
         signUpViewModel.isSignUpSuccess.observe(viewLifecycleOwner , Observer {
-            Toast.makeText(activity,"Please Login", Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,R.string.login_start, Toast.LENGTH_LONG).show()
             progressBar?.visibility = View.VISIBLE
             activity?.onBackPressed()
         })
