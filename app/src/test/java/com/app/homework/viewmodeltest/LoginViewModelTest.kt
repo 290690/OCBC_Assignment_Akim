@@ -1,7 +1,8 @@
-package com.app.homework.viewmodel
+package com.app.homework.viewmodeltest
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.app.homework.LiveDataTestUtil
+import kotlinx.coroutines.*
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Before
@@ -11,7 +12,7 @@ import org.mockito.Mockito.mock
 
 
 class LoginViewModelTest {
-    private lateinit var loginViewModel
+    private lateinit var loginViewModel: Activity
     private lateinit var user: User
 
     @get:Rule
