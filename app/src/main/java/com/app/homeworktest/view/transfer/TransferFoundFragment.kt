@@ -11,14 +11,14 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.app.homeworktest.R
-import com.app.homeworktest.listners.UiEventInterface
+import com.app.homeworktest.domain.listners.UiEventInterface
 import com.app.homeworktest.view.custom.AcknowledgementDialog
 import com.app.homeworktest.viewmodel.TransactionsViewModel
 
 import com.app.homeworktest.view.custom.ThousandSeparatorTextWatcher
 import com.app.homeworktest.view.disableButton
 import com.app.homeworktest.view.enableButton
-import com.app.homeworktest.view.model.PayeeUiModel
+import com.app.homeworktest.model.PayeeUiModel
 import com.app.homeworktest.viewmodel.FundTransferViewModel
 
 

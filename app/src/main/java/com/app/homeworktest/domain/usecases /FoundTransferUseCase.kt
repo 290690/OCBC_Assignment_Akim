@@ -3,13 +3,13 @@ package com.app.homeworktest.usecases
 import androidx.lifecycle.MutableLiveData
 import com.app.homeworktest.domain.MainRepository
 import com.app.homeworktest.domain.Response
-import com.app.homeworktest.domain.model.LoginRequest
-import com.app.homeworktest.listners.CoroutineListener
+import com.app.homeworktest.model.TransferRequestModel
+import com.app.homeworktest.domain.listners.CoroutineListener
 import com.app.homeworktest.util.CoroutineDispatcherProvider
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
-class LoginUseCase (private val mainRepository: MainRepository,private val coroutineProvider : CoroutineDispatcherProvider) : CoroutineScope,
+class FoundTransferUseCase (private val mainRepository: MainRepository,private val coroutineProvider : CoroutineDispatcherProvider) : CoroutineScope,
     CoroutineListener {
 
     var job: Job? = null
@@ -19,11 +19,11 @@ class LoginUseCase (private val mainRepository: MainRepository,private val corou
     /**
      * call account detail api and handle isSuccessful and error
      */
-    fun executeCase(loginRequest : LoginRequest) : MutableLiveData<Response<Any?>> {
+    fun executeCase(token : String,transferRequestModel : TransferRequestModel) : MutableLiveData<Response<Any?>> {
         val data = MutableLiveData<Response<Any?>>()
         job  = launch {
 
-            val response = mainRepository.doLogin(loginRequest)
+            val response = mainRepository.doTransfer(token,transferRequestModel)
             val dataValue = when {
                 response.isSuccessful -> {
                     Response.SuccessResponse(response.body())

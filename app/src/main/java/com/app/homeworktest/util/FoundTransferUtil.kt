@@ -1,6 +1,6 @@
 package com.app.homeworktest.util
 
-import com.app.homeworktest.domain.model.TransactionList
+import com.app.homeworktest.model.TransactionList
 import com.app.homeworktest.view.model.TransactionRecyclerItem
 
 object FoundTransferUtil {

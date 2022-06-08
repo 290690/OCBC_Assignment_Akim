@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.app.homeworktest.R
-import com.app.homeworktest.listners.UiEventInterface
+import com.app.homeworktest.domain.listners.UiEventInterface
 import com.app.homeworktest.util.hideKeyboard
 import com.app.homeworktest.viewmodel.SignUpViewModel
 

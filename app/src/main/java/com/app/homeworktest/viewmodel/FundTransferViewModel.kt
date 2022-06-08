@@ -4,10 +4,10 @@ import androidx.lifecycle.*
 import com.app.homeworktest.domain.ApiService
 import com.app.homeworktest.domain.MainRepository
 import com.app.homeworktest.domain.Response
-import com.app.homeworktest.domain.model.PayeeResponseModel
-import com.app.homeworktest.domain.model.TransferRequestModel
-import com.app.homeworktest.domain.model.TransferResponseModel
-import com.app.homeworktest.view.model.PayeeUiModel
+import com.app.homeworktest.model.PayeeResponseModel
+import com.app.homeworktest.model.TransferRequestModel
+import com.app.homeworktest.model.TransferResponseModel
+import com.app.homeworktest.model.PayeeUiModel
 import com.app.homeworktest.usecases.FoundTransferUseCase
 import com.app.homeworktest.usecases.PayeeListUseCase
 import com.app.homeworktest.util.CoroutineDispatcherProvider
@@ -34,10 +34,15 @@ class FundTransferViewModel : ViewModel() {
 
     val isPayeeListSuccess : LiveData<ArrayList<PayeeUiModel>> get() = _isPayeeListSuccess
     private val _isPayeeListSuccess = MediatorLiveData<ArrayList<PayeeUiModel>>()
+    fun setDummyPayees(payees: ArrayList<PayeeUiModel>) {
+        _isPayeeListSuccess.postValue(payees)
+    }
 
     val isFoundTransferSuccess  : LiveData<TransferResponseModel> get() = _isFoundTransferSuccess
     private val _isFoundTransferSuccess = MediatorLiveData<TransferResponseModel>()
-
+    fun setDummyTransfer(transfer: TransferResponseModel) {
+        _isFoundTransferSuccess.postValue(transfer)
+    }
     private val payeeListListTrigger = MutableLiveData<Unit>()
     private val payeeListListEvent  : LiveData<Response<Any?>> = Transformations.switchMap(payeeListListTrigger){
         payeeListUseCase.executeCase(jwtToken)

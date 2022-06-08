@@ -5,8 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.app.homeworktest.domain.ApiService
 import com.app.homeworktest.domain.MainRepository
-import com.app.homeworktest.domain.model.SignUpRequest
-import com.app.homeworktest.domain.model.SignUpResponse
+import com.app.homeworktest.model.LoginResponse
+import com.app.homeworktest.model.SignUpRequest
+import com.app.homeworktest.model.SignUpResponse
 import kotlinx.coroutines.*
 
 class SignUpViewModel : ViewModel() {
@@ -21,6 +22,9 @@ class SignUpViewModel : ViewModel() {
     private val _isSignUpSuccess : MutableLiveData<SignUpResponse> = MutableLiveData()
     val isSignUpSuccess : LiveData<SignUpResponse>
         get() = _isSignUpSuccess
+    fun setDataDummy(user: SignUpResponse) {
+        _isSignUpSuccess.postValue(user)
+    }
 
     /**
      * live data for notify when Error and handle in UI Fragment or Activity

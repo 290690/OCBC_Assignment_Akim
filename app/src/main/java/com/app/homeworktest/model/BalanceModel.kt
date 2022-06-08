@@ -1,6 +1,4 @@
-package com.app.homeworktest.domain.model
-
-import com.app.homeworktest.domain.Response
+package com.app.homeworktest.model
 
 data class BalanceResponseModel(val status : String,
                                 val accountNo : String,

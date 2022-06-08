@@ -1,4 +1,4 @@
-package com.app.homeworktest.listners
+package com.app.homeworktest.domain.listners
 
 import android.view.View
 

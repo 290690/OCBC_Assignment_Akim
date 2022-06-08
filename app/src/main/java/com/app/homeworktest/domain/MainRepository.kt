@@ -1,6 +1,6 @@
 package com.app.homeworktest.domain
 
-import com.app.homeworktest.domain.model.*
+import com.app.homeworktest.model.*
 
 class MainRepository  constructor(private val apiService: ApiService) {
 

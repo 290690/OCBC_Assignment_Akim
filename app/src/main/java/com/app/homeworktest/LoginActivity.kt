@@ -3,7 +3,7 @@ package com.app.homeworktest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.app.homeworktest.listners.UiEventInterface
+import com.app.homeworktest.domain.listners.UiEventInterface
 import com.app.homeworktest.viewmodel.LoginViewModel
 import android.content.Intent
 import com.app.homeworktest.const.ApplicationConst

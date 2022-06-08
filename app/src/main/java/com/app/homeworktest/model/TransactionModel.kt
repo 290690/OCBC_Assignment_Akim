@@ -1,4 +1,4 @@
-package com.app.homeworktest.domain.model
+package com.app.homeworktest.model
 
 data class TransactionResponse(val status : String,
                                val data : List<TransactionList>)

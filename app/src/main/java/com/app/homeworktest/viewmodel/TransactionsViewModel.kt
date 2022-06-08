@@ -4,7 +4,7 @@ import androidx.lifecycle.*
 import com.app.homeworktest.domain.ApiService
 import com.app.homeworktest.domain.MainRepository
 import com.app.homeworktest.domain.Response
-import com.app.homeworktest.domain.model.*
+import com.app.homeworktest.model.*
 import com.app.homeworktest.view.model.TransactionRecyclerItem
 import com.app.homeworktest.usecases.AccountBalanceUseCase
 import com.app.homeworktest.usecases.TransferListUseCase

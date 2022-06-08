@@ -1,4 +1,4 @@
-package com.app.homeworktest.view.model
+package com.app.homeworktest.model
 
 data class PayeeUiModel(
     var accountNumber: String,

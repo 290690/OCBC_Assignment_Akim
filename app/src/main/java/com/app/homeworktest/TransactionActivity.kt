@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.app.homeworktest.const.ApplicationConst
-import com.app.homeworktest.listners.UiEventInterface
+import com.app.homeworktest.domain.listners.UiEventInterface
 import com.app.homeworktest.view.transfer.TransferFoundFragment
 import com.app.homeworktest.view.transactions.TransactionsFragment
 import androidx.activity.viewModels

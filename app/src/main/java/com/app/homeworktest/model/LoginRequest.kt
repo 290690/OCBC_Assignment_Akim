@@ -1,4 +1,4 @@
-package com.app.homeworktest.domain.model
+package com.app.homeworktest.model
 
 data class LoginRequest(val username : String,
                         val password : String)

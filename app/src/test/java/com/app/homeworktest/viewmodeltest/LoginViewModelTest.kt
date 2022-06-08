@@ -2,7 +2,7 @@ package com.app.homeworktest.viewmodeltest
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.app.homeworktest.LiveDataTestUtil
-import com.app.homeworktest.domain.model.LoginResponse
+import com.app.homeworktest.model.LoginResponse
 import com.app.homeworktest.viewmodel.LoginViewModel
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull

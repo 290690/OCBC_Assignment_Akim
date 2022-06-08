@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.app.homeworktest.domain.ApiService
 import com.app.homeworktest.domain.MainRepository
-import com.app.homeworktest.domain.model.LoginRequest
-import com.app.homeworktest.domain.model.LoginResponse
+import com.app.homeworktest.model.LoginRequest
+import com.app.homeworktest.model.LoginResponse
 import com.app.homeworktest.usecases.LoginUseCase
 import com.app.homeworktest.util.CoroutineDispatcherProvider
 import kotlinx.coroutines.*

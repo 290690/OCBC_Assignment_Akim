@@ -1,4 +1,4 @@
-package com.app.homeworktest.domain.model
+package com.app.homeworktest.model
 
 data class LoginResponse(val status : String,
                          val token : String,

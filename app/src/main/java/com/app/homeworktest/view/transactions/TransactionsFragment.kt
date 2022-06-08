@@ -12,7 +12,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.app.homeworktest.R
-import com.app.homeworktest.listners.UiEventInterface
+import com.app.homeworktest.domain.listners.UiEventInterface
 import com.app.homeworktest.util.FormatUtil
 import com.app.homeworktest.viewmodel.TransactionsViewModel
 import java.lang.NumberFormatException

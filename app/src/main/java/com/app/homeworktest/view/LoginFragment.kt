@@ -14,7 +14,7 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.app.homeworktest.R
-import com.app.homeworktest.listners.UiEventInterface
+import com.app.homeworktest.domain.listners.UiEventInterface
 import com.app.homeworktest.util.hideKeyboard
 import com.app.homeworktest.viewmodel.LoginViewModel
 
