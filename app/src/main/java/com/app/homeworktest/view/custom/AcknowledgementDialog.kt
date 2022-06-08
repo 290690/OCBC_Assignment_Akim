@@ -13,10 +13,10 @@ object  AcknowledgementDialog  {
 
     fun showDialog(activity: Activity?, msg: String?,isSuccess : Boolean) {
         val dialog = Dialog(activity!!)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.fund_transfer_confirmation_dialog)
         val text = dialog.findViewById<View>(R.id.text_dialog) as TextView
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         text.text = msg
 
         if (!isSuccess){

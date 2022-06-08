@@ -1,5 +1,6 @@
-package com.app.homeworktest.view.listners
+package com.app.homeworktest.listners
 
 interface CoroutineListener {
+
     fun cancel()
 }

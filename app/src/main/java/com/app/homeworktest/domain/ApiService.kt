@@ -1,6 +1,6 @@
-package com.app.homeworktest.model.domain
+package com.app.homeworktest.domain
 
-import com.app.homeworktest.model.*
+import com.app.homeworktest.domain.model.*
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -15,19 +15,18 @@ interface ApiService {
     @POST("register")
     suspend fun doSignUp(@Body signUpRequest : SignUpRequest) : Response<SignUpResponse>
 
-    @POST("transfer")
-    suspend fun doTransfer(@Header("Authorization") authorization : String,
-                           @Body transferRequestModel : TransferRequestModel) : Response<TransferResponseModel>
+    @GET("balance")
+    suspend fun getAccountBalance(@Header("Authorization") authorization : String) : Response<BalanceResponseModel>
 
     @GET("transactions")
     suspend fun getTransactions(@Header("Authorization") authorization : String) : Response<TransactionResponse>
 
-    @GET("balance")
-    suspend fun getAccountBalance(@Header("Authorization") authorization : String) : Response<BalanceResponseModel>
-
     @GET("payees")
     suspend fun getPayeeList(@Header("Authorization") authorization : String) : Response<PayeeResponseModel>
 
+    @POST("transfer")
+    suspend fun doTransfer(@Header("Authorization") authorization : String,
+                           @Body transferRequestModel : TransferRequestModel) : Response<TransferResponseModel>
 
     companion object {
         var retrofitService: ApiService? = null

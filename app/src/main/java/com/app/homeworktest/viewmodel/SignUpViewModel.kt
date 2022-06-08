@@ -3,10 +3,10 @@ package com.app.homeworktest.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.app.homeworktest.model.domain.ApiService
-import com.app.homeworktest.model.domain.MainRepository
-import com.app.homeworktest.model.SignUpRequest
-import com.app.homeworktest.model.SignUpResponse
+import com.app.homeworktest.domain.ApiService
+import com.app.homeworktest.domain.MainRepository
+import com.app.homeworktest.domain.model.SignUpRequest
+import com.app.homeworktest.domain.model.SignUpResponse
 import kotlinx.coroutines.*
 
 class SignUpViewModel : ViewModel() {
@@ -15,10 +15,16 @@ class SignUpViewModel : ViewModel() {
     private val apiService: ApiService = ApiService.getInstance()
     private val mainRepository: MainRepository = MainRepository(apiService)
 
+    /**
+     * live data for notify after when redirect to SignUp screen anywhere in the app
+     */
     private val _isSignUpSuccess : MutableLiveData<SignUpResponse> = MutableLiveData()
     val isSignUpSuccess : LiveData<SignUpResponse>
         get() = _isSignUpSuccess
 
+    /**
+     * live data for notify when Error and handle in UI Fragment or Activity
+     */
     private val _isError : MutableLiveData<String> = MutableLiveData()
     val isError : LiveData<String>
         get() = _isError

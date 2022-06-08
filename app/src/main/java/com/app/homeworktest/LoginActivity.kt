@@ -1,16 +1,17 @@
-package com.app.homeworktest.view
+package com.app.homeworktest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.app.homeworktest.view.listners.UiEventInterface
+import com.app.homeworktest.listners.UiEventInterface
 import com.app.homeworktest.viewmodel.LoginViewModel
 import android.content.Intent
 import com.app.homeworktest.const.ApplicationConst
 import com.app.homeworktest.util.addFragment
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import com.app.homeworktest.R
+import com.app.homeworktest.view.LoginFragment
+import com.app.homeworktest.view.SignUpFragment
 
 class LoginActivity : AppCompatActivity(),UiEventInterface {
 

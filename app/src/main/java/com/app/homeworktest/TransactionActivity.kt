@@ -1,15 +1,14 @@
-package com.app.homeworktest.view
+package com.app.homeworktest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.app.homeworktest.const.ApplicationConst
-import com.app.homeworktest.view.listners.UiEventInterface
+import com.app.homeworktest.listners.UiEventInterface
 import com.app.homeworktest.view.transfer.TransferFoundFragment
 import com.app.homeworktest.view.transactions.TransactionsFragment
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import com.app.homeworktest.R
 import com.app.homeworktest.util.addFragment
 import com.app.homeworktest.viewmodel.TransactionsViewModel
 

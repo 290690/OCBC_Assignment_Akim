@@ -7,6 +7,9 @@ import java.util.*
 
 object FormatUtil {
 
+    /**
+     * decimal format or apply Pattern for amount
+     */
     fun doubleToStringNoDecimal(d: Double): String? {
         val formatter: DecimalFormat = NumberFormat.getInstance(Locale.US) as DecimalFormat
         formatter.applyPattern("#,###,###.##")

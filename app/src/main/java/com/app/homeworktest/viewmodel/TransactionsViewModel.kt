@@ -1,15 +1,16 @@
 package com.app.homeworktest.viewmodel
 
 import androidx.lifecycle.*
-import com.app.homeworktest.model.domain.ApiService
-import com.app.homeworktest.model.domain.MainRepository
-import com.app.homeworktest.model.domain.Response
-import com.app.homeworktest.model.*
+import com.app.homeworktest.domain.ApiService
+import com.app.homeworktest.domain.MainRepository
+import com.app.homeworktest.domain.Response
+import com.app.homeworktest.domain.model.*
 import com.app.homeworktest.view.model.TransactionRecyclerItem
 import com.app.homeworktest.usecases.AccountBalanceUseCase
 import com.app.homeworktest.usecases.TransferListUseCase
 import com.app.homeworktest.util.CoroutineDispatcherProvider
 import com.app.homeworktest.util.FoundTransferUtil
+
 
 class TransactionsViewModel : ViewModel() {
 
@@ -17,12 +18,12 @@ class TransactionsViewModel : ViewModel() {
      * keep token in view model, better encrypt and keep in local repo and
      */
     private var jwtToken : String = ""
-        fun getJwtToken() = jwtToken
+    fun getJwtToken() = jwtToken
 
     private var accountHolderName : String = ""
 
     private var accountBalance : String = ""
-                fun accountBalance() = accountBalance
+    fun accountBalance() = accountBalance
 
     private val apiService: ApiService = ApiService.getInstance()
     private val mainRepository: MainRepository = MainRepository(apiService)
@@ -52,7 +53,9 @@ class TransactionsViewModel : ViewModel() {
     private val _isError : MutableLiveData<String> = MutableLiveData()
     val isError : LiveData<String>
         get() = _isError
-
+    /**
+     * live data for handle Loading and notify for UI
+     */
     private val _isLoading : MutableLiveData<Boolean> = MutableLiveData()
     val isLoading : LiveData<Boolean>
         get() = _isLoading

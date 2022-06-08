@@ -1,9 +1,9 @@
-package com.app.homeworktest.view.listners
+package com.app.homeworktest.listners
 
 import android.view.View
 
 interface UiEventInterface {
 
-    fun initLiveData()
     fun setUpUi(view : View)
+    fun initLiveData()
 }

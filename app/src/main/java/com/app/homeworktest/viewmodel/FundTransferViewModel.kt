@@ -1,16 +1,17 @@
 package com.app.homeworktest.viewmodel
 
 import androidx.lifecycle.*
-import com.app.homeworktest.model.domain.ApiService
-import com.app.homeworktest.model.domain.MainRepository
-import com.app.homeworktest.model.domain.Response
-import com.app.homeworktest.model.PayeeResponseModel
-import com.app.homeworktest.model.TransferRequestModel
-import com.app.homeworktest.model.TransferResponseModel
-import com.app.homeworktest.model.PayeeUiModel
+import com.app.homeworktest.domain.ApiService
+import com.app.homeworktest.domain.MainRepository
+import com.app.homeworktest.domain.Response
+import com.app.homeworktest.domain.model.PayeeResponseModel
+import com.app.homeworktest.domain.model.TransferRequestModel
+import com.app.homeworktest.domain.model.TransferResponseModel
+import com.app.homeworktest.view.model.PayeeUiModel
 import com.app.homeworktest.usecases.FoundTransferUseCase
 import com.app.homeworktest.usecases.PayeeListUseCase
 import com.app.homeworktest.util.CoroutineDispatcherProvider
+
 
 class FundTransferViewModel : ViewModel() {
 
@@ -98,4 +99,5 @@ class FundTransferViewModel : ViewModel() {
     fun setPayeeUiModel(payeeUiModel : PayeeUiModel){
         payeeModel = payeeUiModel
     }
+
 }

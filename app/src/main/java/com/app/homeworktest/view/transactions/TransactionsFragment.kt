@@ -12,21 +12,21 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.app.homeworktest.R
-import com.app.homeworktest.view.listners.UiEventInterface
+import com.app.homeworktest.listners.UiEventInterface
 import com.app.homeworktest.util.FormatUtil
 import com.app.homeworktest.viewmodel.TransactionsViewModel
 import java.lang.NumberFormatException
 import android.content.Intent
 
-import com.app.homeworktest.view.LoginActivity
+import com.app.homeworktest.LoginActivity
 
 
 class TransactionsFragment : Fragment(), UiEventInterface {
 
     private val transactionsViewModel: TransactionsViewModel by activityViewModels()
+    private var progressBar : ProgressBar? = null
     private var accountHolderNumberText : TextView? = null
     private var accountBalanceText : TextView? = null
-    private var progressBar : ProgressBar? = null
     private lateinit var recyclerView : RecyclerView
 
     companion object {

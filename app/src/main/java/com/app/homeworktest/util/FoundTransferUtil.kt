@@ -1,11 +1,15 @@
 package com.app.homeworktest.util
 
-import com.app.homeworktest.model.TransactionList
+import com.app.homeworktest.domain.model.TransactionList
 import com.app.homeworktest.view.model.TransactionRecyclerItem
 
 object FoundTransferUtil {
 
 
+    /**
+     * prepare TransactionRecyclerItems section list UI model for adapter
+     * group from transaction date
+     */
     fun getTransactionList(data : List<TransactionList>) : ArrayList<TransactionRecyclerItem>{
 
         val transactionList : ArrayList<TransactionRecyclerItem> = arrayListOf()

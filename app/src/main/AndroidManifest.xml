@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Homework">
         <activity
-            android:name="com.app.homeworktest.view.TransactionActivity"
+            android:name="com.app.homeworktest.TransactionActivity"
             android:exported="true" />
         <activity
-            android:name="com.app.homeworktest.view.LoginActivity"
+            android:name="com.app.homeworktest.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

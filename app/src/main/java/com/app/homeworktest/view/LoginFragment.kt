@@ -14,17 +14,17 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.app.homeworktest.R
-import com.app.homeworktest.view.listners.UiEventInterface
+import com.app.homeworktest.listners.UiEventInterface
 import com.app.homeworktest.util.hideKeyboard
 import com.app.homeworktest.viewmodel.LoginViewModel
 
 class LoginFragment : Fragment(),UiEventInterface {
 
     private val loginViewModel: LoginViewModel by activityViewModels()
-    private lateinit var loginBtn : AppCompatButton
-    private lateinit var userNameEdtText : EditText
-    private lateinit var passwordEdtText : EditText
-    private lateinit var progressBar : ProgressBar
+    private var userNameEdtText : EditText? = null
+    private var passwordEdtText : EditText? = null
+    private var progressBar : ProgressBar? = null
+    private var loginBtn : AppCompatButton? = null
 
     companion object {
         fun newInstance() = LoginFragment()

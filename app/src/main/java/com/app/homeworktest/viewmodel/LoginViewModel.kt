@@ -3,10 +3,10 @@ package com.app.homeworktest.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.app.homeworktest.model.domain.ApiService
-import com.app.homeworktest.model.domain.MainRepository
-import com.app.homeworktest.model.LoginRequest
-import com.app.homeworktest.model.LoginResponse
+import com.app.homeworktest.domain.ApiService
+import com.app.homeworktest.domain.MainRepository
+import com.app.homeworktest.domain.model.LoginRequest
+import com.app.homeworktest.domain.model.LoginResponse
 import com.app.homeworktest.usecases.LoginUseCase
 import com.app.homeworktest.util.CoroutineDispatcherProvider
 import kotlinx.coroutines.*
@@ -16,15 +16,22 @@ class LoginViewModel() : ViewModel() {
     private val apiService: ApiService = ApiService.getInstance()
     private val mainRepository: MainRepository = MainRepository(apiService)
     private val payeeListUseCase = LoginUseCase(mainRepository, CoroutineDispatcherProvider())
-
+    /**
+     * live data for notify after when redirect to Register screen anywhere in the app
+     */
     private val _isRegister : MutableLiveData<Boolean> = MutableLiveData()
     val isRegister : LiveData<Boolean>
         get() = _isRegister
 
-
+    /**
+     * live data for notify after when redirect to Login screen anywhere in the app
+     */
     private val _isLoginSuccess : MutableLiveData<LoginResponse> = MutableLiveData()
     val isLoginSuccess : LiveData<LoginResponse>
         get() = _isLoginSuccess
+    fun setDataDummy(user: LoginResponse) {
+        _isLoginSuccess.postValue(user)
+    }
 
     /**
      * live data for notify when Error and handle in UI Fragment or Activity

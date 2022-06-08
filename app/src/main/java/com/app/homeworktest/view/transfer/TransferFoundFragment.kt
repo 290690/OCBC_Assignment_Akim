@@ -11,15 +11,16 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.app.homeworktest.R
-import com.app.homeworktest.view.listners.UiEventInterface
+import com.app.homeworktest.listners.UiEventInterface
 import com.app.homeworktest.view.custom.AcknowledgementDialog
 import com.app.homeworktest.viewmodel.TransactionsViewModel
 
 import com.app.homeworktest.view.custom.ThousandSeparatorTextWatcher
 import com.app.homeworktest.view.disableButton
 import com.app.homeworktest.view.enableButton
-import com.app.homeworktest.model.PayeeUiModel
+import com.app.homeworktest.view.model.PayeeUiModel
 import com.app.homeworktest.viewmodel.FundTransferViewModel
+
 
 
 class TransferFoundFragment : Fragment(), UiEventInterface,ThousandSeparatorTextWatcher.AmountFormatTextWatcherListener {
@@ -66,7 +67,7 @@ class TransferFoundFragment : Fragment(), UiEventInterface,ThousandSeparatorText
         registerBtn.disableButton()
         amountEdtText = view.findViewById(R.id.found_transfer_amount_edtxt)
         descEdtText = view.findViewById(R.id.found_transfer_desc_edtxt)
-        amountEdtText.addTextChangedListener(ThousandSeparatorTextWatcher(transactionsViewModel.accountBalance(),amountEdtText,this))
+        amountEdtText.addTextChangedListener(ThousandSeparatorTextWatcher(amountEdtText,transactionsViewModel.accountBalance(),this))
 
         titleText.setText(R.string.transfer_title)
         titleImage.visibility = View.VISIBLE

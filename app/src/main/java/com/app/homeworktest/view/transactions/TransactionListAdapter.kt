@@ -34,7 +34,6 @@ class TransactionListAdapter(private val transactionList : List<TransactionRecyc
         override fun getItemViewType(position: Int) = when(transactionList[position]) {
             is TransactionRecyclerItem.TransactionRecyclerRow -> TYPE_ROW
             is TransactionRecyclerItem.TransactionRecyclerTitle -> TYPE_SECTION
-
         }
 
         inner class ViewHolderTitle(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -46,9 +45,9 @@ class TransactionListAdapter(private val transactionList : List<TransactionRecyc
         }
 
         inner class ViewHolderRow(itemView: View) : RecyclerView.ViewHolder(itemView)  {
+            private val nameText : TextView = itemView.findViewById(R.id.transaction_row_name_text)
             private val amountText : TextView = itemView.findViewById(R.id.transaction_row_amount_text)
             private val accountNumberText : TextView = itemView.findViewById(R.id.transaction_row_account_text)
-            private val nameText : TextView = itemView.findViewById(R.id.transaction_row_name_text)
 
             fun bind(item : TransactionRecyclerItem.TransactionRecyclerRow){
                 nameText.text = item.name
