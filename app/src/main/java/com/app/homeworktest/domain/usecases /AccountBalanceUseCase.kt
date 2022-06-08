@@ -3,7 +3,7 @@ package com.app.homeworktest.usecases
 import androidx.lifecycle.MutableLiveData
 import com.app.homeworktest.domain.MainRepository
 import com.app.homeworktest.domain.Response
-import com.app.homeworktest.listners.CoroutineListener
+import com.app.homeworktest.domain.listners.CoroutineListener
 import com.app.homeworktest.util.CoroutineDispatcherProvider
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
