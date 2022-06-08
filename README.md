@@ -22,7 +22,7 @@ The app has following packages:
 6. Transfer Balance
 
 # Usage 
-Architecture : MVVM
+Architecture using MVVM
 <br><br>
 1. Retrofit2: Used for REST api call
 2. Jetpack navigation: Used for navigate fragments
